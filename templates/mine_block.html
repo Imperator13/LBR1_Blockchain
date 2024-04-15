@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Mining Blocks{% endblock %}
+
+{% block content %}
+  <h1 style="text-align: center;">Mining Blocks</h1>
+  <a href="{{ url_for('valid') }}">Check for Validity</a><br>
+  <a href="{{ url_for('display_chain') }}">Display Chain</a><br>
+  <a href="{{ url_for('mine_block')}}">Mine Next Block</a><br>
+
+  <a href="{{ url_for('index') }}" style="color: #00FF00; margin-top: 30px;">Back to Main Page</a><br>
+
+  {% for key, value in response.items() %}
+    <p>{{key}}: {{value}}</p>
+  {% endfor %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <h1 style="text-align: center;">Welcome to the Blockchain App</h1>
+  <p style="text-align: center;">This is the Main Page</p>
+  <a href="{{ url_for('valid') }}">Check for Validity</a><br>
+  <a href="{{ url_for('display_chain') }}">Display Chain</a><br>
+  <a href="{{ url_for('mine_block') }}">Mine Block</a><br>
+{% endblock %}
